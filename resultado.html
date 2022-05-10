@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="resources/css/styles.css">
+    <link rel="shortcut icon" href="resources/img/school-bus-6620337__480.png" type="image/x-icon">
+    
+    <title>Resultado</title>
+
+</head>
+<body>
+
+    <h2>Programa tu viaje</h2>
+
+    <div class="contain">
+            
+        <h4>¡¡Enhora buena!!</h4>
+        <p>Estas más cerca de tu destino</p>
+        <div class="datos">
+            <h2>Nombre</h2>
+                <p id="name" class="result"></p>
+            <h2>Cantidad</h2>
+                <p id="quantity" class="result"></p>
+            <h2>Origen</h2>
+                <p id="orig" class="result"></p>
+            <h2>Destino</h2>
+                <p id="dest" class="result"></p>
+        </div>
+    
+    </div>
+
+</body> 
+</html>
+
+<script>
+    let nombre = document.querySelector("#name");
+    (function(){
+        let url = new URLSearchParams(location.search);
+        console.log(" url ---> " , url);
+        const name = url.get('Nombre');
+        console.log("name" , name);
+        nombre.innerHTML = name
+    }())
+    
+    
+
+</script>

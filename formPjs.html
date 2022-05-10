@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="resources/css/styles.css"  media="screen" />
+    <link rel="shortcut icon" href="resources/img/school-bus-6620337__480.png" type="image/x-icon" />
+    <title>Venta de pasajes</title>
+
+</head>
+<body>
+    <div class="contains">
+        
+        <div class="subcontains">
+            <h2> Venta de Pasajes </h2>
+        
+            <form action="resultado.html" id="formTickets" method="get" onsubmit="validar(event)">
+                
+                <div class="form-group">
+            
+                    <label for="iptText">Nombre y apellido</label>
+                    <input type="text" name="Nombre" class="shadow" id="iptText" placeholder="Example Jean...">
+                </div>
+    
+                <div class="form-group">
+                
+                    <label for="iptCantidad">Cantidad </label>
+                    <input type="number" name="Cantidad" class="shadow" id="iptCantidad" min="1" max="10" placeholder="Example: 2">
+                
+                </div>
+    
+                <div class="form-group">
+                
+                    <label for="iptOrigen">Origen </label>
+                    <div class="my-select ">
+                        <input type="text" class="select shadow"  readonly name="Origen" id="iptOrigen" placeholder="Ciudad...">
+        
+                        <ul class="options-container">
+                            <li class="option" onclick="hiddenSelect()" data-value="1"> Santiago </li>
+                            <li class="option" onclick="hiddenSelect()" data-value="2"> Concepción </li>
+                            <li class="option" onclick="hiddenSelect()" data-value="3"> Talca </li>
+                        </ul>
+            
+                    </div> 
+                
+                </div>
+    
+                <h4> Destino </h4>
+                
+                <div class="form-group">
+                
+                    <label for="iptCiudadDestino">Ciudad </label>
+            
+                        <div class="my-select" >
+                            <input type="text" class="select shadow"   readonly name="destCity"  id="iptCiudadDestino" placeholder="Ciudad...">
+            
+                            <ul class="options-container">
+                                
+                                <li class="option" onclick="hiddenSelect() , changeValue(this)" value="1"> Santiago </li>
+                                <li class="option" onclick="hiddenSelect() , changeValue(this)" value="2"> Concepción </li>
+                                <li class="option" onclick="hiddenSelect() , changeValue(this)" value="3"> Talca </li>
+                            </ul>
+                
+                        </div> 
+    
+                </div>
+                
+                <div class="form-group">
+                
+                    <label for="iptComunaDestino">Comuna </label>
+                    <div class="my-select" >
+                        <input type="text" class="select shadow"   readonly name="destComuna" id="iptComunaDestino" placeholder="Comuna...">
+        
+                        <ul class="options-container" id="optionComuna">
+                            <li class="option" onclick="hiddenSelect()" data-value="0"> Comuna... </li>
+                        </ul>
+            
+                    </div>    
+                </div>
+                
+                <input type="submit" value="Consultar"  id="btn-Rev" class="btn-primary" >
+                
+            </form>
+        </div>
+        <div class="subcontains">
+            <img src="resources/img/coach-3206326.png" class="w-100">
+        </div>
+     
+    </div>
+    
+    <script src="dist/index.js"></script>
+
+</body>
+</html>

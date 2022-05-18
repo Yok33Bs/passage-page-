@@ -4,7 +4,7 @@
   --color-primary: #333333;
   --color-secondary: #2f4f4f;
   --color-white: #f2f2f2;
-  --border-radius: 5px;
+  --border-radius: 25px;
 }
 
 * {
@@ -22,7 +22,7 @@ h1,
 h2,
 h3,
 h4 {
-  margin-top: 20px;
+  margin-top: 35px;
   color: var(--color-primary);
 }
 .contains {
@@ -34,11 +34,13 @@ h4 {
   width: 47%;
   display: inline-block;
 }
-.w-100{
+.subcontains img {
   width: 100%;
+  height: 390px;
 }
+
 .form-group {
-  width: 30%;
+  width: 80%;
   margin: 10px 0px;
 }
 
@@ -46,6 +48,7 @@ h4 {
   filter: drop-shadow(2px 6px 15px 2px rgba(0, 0, 0, 0.75));
   box-shadow: 2px 6px 15px 2px rgba(0, 0, 0, 0.75);
 }
+
 input[type="text"],
 input[type="number"]{
   width: 100%;
@@ -59,41 +62,17 @@ input[type="number"]:focus{
   border: 1px solid var(--color-primary);
 }
 
-#btn-Rev {
+.btn-primary {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
   color: var(--color-white);
   border-radius: var(--border-radius);
   padding: 5px 15px;
   margin: 20px 2px;
 }
-.btn-primary {
-  border: 1px solid var(--color-primary);
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}
 
-.btn-secondary {
-  border: 1px solid var(--color-primary);
-  background-color: var(--color-secondary);
-  color: var(--color-white);
-}
-
-#btn-Rev:hover {
+.btn-primary:hover {
   opacity: 0.9;
-}
-
-img {
-  width: 650px;
-  float: right;
-}
-
-.my-select {
-  width: 100%;
-}
-
-.my-select input {
-  width: 100%;
-  border-radius: 25px;
-
 }
 
 .option{
@@ -120,17 +99,87 @@ img {
   color: #fff ;
 }
 
-.datos{
+/*.datos{
   border: 1px solid  black;
   display: contents;
-};
+}*/
 
 /* Medidas Smartphone */
-
-
-@media (min-width: 768px) and (max-width: 1199px) { 
-  
+@media only screen and (max-width: 576px) {
   .subcontains {
     width: 100%;
   }
-} 
+  .form-group {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  input[type="text"],
+  input[type="number"]{
+    height: 26px;
+  }
+
+  .btn-sm-w100{
+    width: 100%;
+  }
+
+  .subcontains img {
+    height: 191px;
+    width: 100%;
+  }
+
+}
+/* Medidas Tablets Hacer Ipad mini */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .subcontains {
+    width: 100%;
+  }
+  .form-group {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  input[type="text"],
+  input[type="number"]{
+    height: 26px;
+    margin-bottom: 3px;
+  }
+
+  .btn-sm-w100{
+    width: 100%;
+  }
+
+  .subcontains img {
+    height: 355px;
+    width: 100%;
+  }
+
+}
+
+/* Medidas Tablets Hacer Ipad Air */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .subcontains {
+    width: 46%;
+  }
+  .form-group {
+    width: 100%;
+    margin: 10px 0px;
+  }
+
+  input[type="text"],
+  input[type="number"]{
+    height: 26px;
+    margin-bottom: 5px;
+  }
+
+  .btn-sm-w100{
+    width: 70%;
+  }
+
+  .subcontains img {
+    height: 355px;
+    width: 100%;
+    margin-left: 15%;
+  }
+
+}

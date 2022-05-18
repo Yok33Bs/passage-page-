@@ -145,8 +145,8 @@ function selectedCheck (elementSelected) :void {
 
 let nombre : any = document.querySelector('#iptText') ;
 const cantidad : any = document.querySelector('#iptCantidad') ;
-const ciudadDestino : any= document.querySelector('#iptCiudadDestino') ;
-
+const iptCiudadDestino : any= document.querySelector('#iptCiudadDestino') ;
+const iptComunaDestino : any= document.querySelector('#iptComunaDestino') ;
 const iptOrigen : any= document.querySelector('#iptOrigen') ;
 
 function validar(event : any):any{
@@ -169,6 +169,17 @@ function validar(event : any):any{
         iptOrigen.focus();
         return false ;
     }
+    if( iptCiudadDestino.value == "" ){
+        alert("Debe agregar una ciudad de origen");
+        iptCiudadDestino.focus();
+        return false ;
+    }
+    if( iptComunaDestino.value == "" ){
+        alert("Debe agregar una ciudad de origen");
+        iptComunaDestino.focus();
+        return false ;
+    }
+
 
     const formTickets : any = document.querySelector('#formTickets') ;
 

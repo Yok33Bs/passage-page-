@@ -59,11 +59,11 @@ input[type="number"]{
 
 input[type="text"]:focus,
 input[type="number"]:focus{
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-secondary);
 }
 
 .btn-primary {
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-secondary);
   background-color: var(--color-primary);
   color: var(--color-white);
   border-radius: var(--border-radius);
@@ -110,8 +110,14 @@ input[type="number"]:focus{
     width: 100%;
   }
   .form-group {
-    width: 100%;
-    margin: 10px 0px;
+    text-align: center;
+    width: 90%;
+    margin: 10px 25px;
+  }
+
+  .options-container {
+    width: 70%;
+    margin: 0% 1%;
   }
 
   input[type="text"],
@@ -120,11 +126,12 @@ input[type="number"]:focus{
   }
 
   .btn-sm-w100{
-    width: 100%;
+    margin: 10px 25px;
+    width: 90%;
   }
 
   .subcontains img {
-    height: 191px;
+    height: 220px;
     width: 100%;
   }
 
@@ -136,7 +143,46 @@ input[type="number"]:focus{
   }
   .form-group {
     width: 100%;
+    margin: 10px 25px;
+  }
+
+  .options-container {
+    width: 70%;
+    margin: 0% 1%;
+  }
+
+  input[type="text"],
+  input[type="number"]{
+    height: 26px;
+    margin-bottom: 3px;
+  }
+
+  .btn-sm-w100{
+    margin: 10px 25px;
+    width: 100%;
+  }
+
+  .subcontains img {
+    height: 355px;
+    width: 100%;
+  }
+
+}
+
+/* Medidas Tablets Hacer Ipad Air */
+@media only screen and (min-width: 769px) and (max-width: 930px) {
+  .subcontains {
+    width: 100%;
+  }
+  .form-group {
+    text-align: center;
+    width: 100%;
     margin: 10px 0px;
+  }
+
+  .options-container {
+    width: 70%;
+    margin: 0% 1%;
   }
 
   input[type="text"],
@@ -150,36 +196,8 @@ input[type="number"]:focus{
   }
 
   .subcontains img {
-    height: 355px;
+    height: 400px;
     width: 100%;
-  }
-
-}
-
-/* Medidas Tablets Hacer Ipad Air */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .subcontains {
-    width: 46%;
-  }
-  .form-group {
-    width: 100%;
-    margin: 10px 0px;
-  }
-
-  input[type="text"],
-  input[type="number"]{
-    height: 26px;
-    margin-bottom: 5px;
-  }
-
-  .btn-sm-w100{
-    width: 70%;
-  }
-
-  .subcontains img {
-    height: 355px;
-    width: 100%;
-    margin-left: 15%;
   }
 
 }

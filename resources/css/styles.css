@@ -115,9 +115,9 @@ input[type="number"]:focus{
     margin: 10px 25px;
   }
 
-  .options-container {
-    width: 70%;
-    margin: 0% 1%;
+  .my-select .options-container {
+    width: 64%;
+    margin: 0px 10px;
   }
 
   input[type="text"],
